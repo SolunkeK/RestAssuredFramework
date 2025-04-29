@@ -22,7 +22,7 @@ public class ProductTests extends BaseClass
 	ConfigReader configReader = new ConfigReader();
 
 	// Fetch all product details.
-	//@Test
+	@Test
 	public void testGetAllProducts()
 	{
 		given()
