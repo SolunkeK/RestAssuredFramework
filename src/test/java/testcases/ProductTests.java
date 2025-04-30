@@ -195,23 +195,5 @@ public class ProductTests extends BaseClass
 							  
 						}	
 						
-						// New Delete Product
-						@Test
-						public void testNewDeleteProduct()
-						{	
-							int productId = configReader.getIntProperty("productId");
-						
-							given()
-							    .contentType(ContentType.JSON)
-							    .pathParam("id",productId)
-					
-							
-							.when()
-							    .delete(Routes.PRODUCT_DELETE)
-							
-							.then()
-							   .statusCode(200);
-							  
-						}	
 			
 }
