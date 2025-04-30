@@ -177,7 +177,7 @@ public class ProductTests extends BaseClass
 			}
 			
 			// Delete Product
-						@Test
+						//@Test
 						public void testDeleteProduct()
 						{	
 							int productId = configReader.getIntProperty("productId");
@@ -193,6 +193,25 @@ public class ProductTests extends BaseClass
 							.then()
 							   .statusCode(200);
 							  
-						}			
+						}	
+						
+						// New Delete Product
+						@Test
+						public void testNewDeleteProduct()
+						{	
+							int productId = configReader.getIntProperty("productId");
+						
+							given()
+							    .contentType(ContentType.JSON)
+							    .pathParam("id",productId)
+					
+							
+							.when()
+							    .delete(Routes.PRODUCT_DELETE)
+							
+							.then()
+							   .statusCode(200);
+							  
+						}	
 			
 }
